@@ -1,7 +1,8 @@
 import numpy as np
 from skimage.filters import gaussian
 from skimage.restoration import denoise_nl_means, estimate_sigma
-from skimage import color, filters, img_as_float, util
+from skimage import color, filters, img_as_float, transform, util
+from sklearn.cluster import KMeans
 
 
 def grayscale(image):
@@ -75,3 +76,24 @@ def warhol_effect(image):
             combined_image = np.concatenate((combined_image, new_image), axis=1)
 
     return combined_image
+
+
+def pixelate(image, scale, num_colors):
+    h, w = image.shape[:2]
+
+    image_small = transform.resize(image, (h * scale, w * scale), anti_aliasing=False)
+    image_pixelated = transform.resize(
+        image_small, (h, w), anti_aliasing=False, order=0
+    )
+
+    image_temp = color.rgb2lab(image_pixelated)
+    reshaped_img = image_temp.reshape((-1, 3))
+
+    kmeans = KMeans(n_clusters=num_colors, random_state=42).fit(reshaped_img)
+    palette = kmeans.cluster_centers_
+
+    labels = kmeans.predict(reshaped_img)
+    new_image = palette[labels].reshape(image_temp.shape)
+    new_image = color.lab2rgb(new_image)
+
+    return new_image
