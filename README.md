@@ -1,3 +1,7 @@
+[![nbviewer badge](https://img.shields.io/badge/view%20on-nbviewer-brightgreen.svg)](https://nbviewer.org/github/coderefinery/imgfilters/blob/main/notebook.ipynb)
+[![binder badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/coderefinery/imgfilters/HEAD?labpath=notebook.ipynb)
+
+
 # imgfilters: A little example project we use in teaching
 
 This is part of https://coderefinery.github.io/mini-workshop/.
