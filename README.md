@@ -1,5 +1,9 @@
 # imgfilters: A little example project we use in teaching
 
+The example is meant to celebrate [Eileen
+Collins](https://en.wikipedia.org/wiki/Eileen_Collins), the first woman to
+pilot the Space Shuttle and the first to command a Space Shuttle mission.
+
 
 ## Purpose
 
