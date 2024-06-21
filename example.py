@@ -3,6 +3,7 @@ from imgfilters.filters import (
     add_noise,
     gaussian_smoothing,
     denoise,
+    warhol_effect,
 )
 from imgfilters.file_io import read_image, save_image
 
@@ -24,3 +25,7 @@ save_image(image_smoothed, "generated/astronaut-smoothed.jpg")
 
 image_denoised = denoise(image_noisy, magic_factor=1.2)
 save_image(image_denoised, "generated/astronaut-denoised.jpg")
+
+
+image_effect = warhol_effect(image)
+save_image(image_effect, "generated/astronaut-warhol.jpg")
