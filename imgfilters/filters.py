@@ -12,7 +12,7 @@ def add_noise(image, amount):
     return noisy_image
 
 
-def gaussian_smoothing(image, sigma=10):
+def gaussian_smoothing(image, sigma=5):
     smoothed_image = np.zeros_like(image)
     for i in range(image.shape[2]):
         smoothed_image[:, :, i] = gaussian(
