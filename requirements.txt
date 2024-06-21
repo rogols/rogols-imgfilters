@@ -2,3 +2,7 @@ numpy
 scikit-image
 scikit-learn
 pywavelets
+
+# notebook
+matplotlib
+jupyterlab

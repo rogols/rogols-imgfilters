@@ -1,3 +1,4 @@
+.ipynb_checkpoints/
 *.sif
 venv/
 generated/*.jpg
