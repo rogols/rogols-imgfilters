@@ -1,0 +1,3 @@
+“What do you know now about programming that you wish you knew when you started?”: 
+- Importance of browsing other's repos. 
+- That it's OK to have tiny commits.
